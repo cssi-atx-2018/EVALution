@@ -1,5 +1,8 @@
 body {
   background-color: #7ad1bb90;
+  /* background-color: #71C2AD; */
+  /* background-color: #77CCB7; */
+  /* background-color: #79CFB9; */
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
   color: white;
@@ -61,4 +64,18 @@ form {
   text-decoration: none;
   display: center;
   padding: 2% 0 0 15%;
+}
+
+.words {
+  padding: 1% 1% 1% 1%;
+  margin: 0 2% 0 2%;
+  /* color: #999999; */
+}
+
+h1 {
+  font-size: 35px;
+}
+
+p {
+  font-size: 20px;
 }
