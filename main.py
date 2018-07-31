@@ -20,12 +20,11 @@ class MainHandler(webapp2.RequestHandler):
 class BottleHandler(webapp2.RequestHandler):
     def get(self):
         bottle_template = jinja_env.get_template("glassbottle.html")
+        self.response.write(bottle_template.render())
 
 class LoginHandler(webapp2.RequestHandler):
     def post(self):
         login_template = jinja_env.get_template("Login/templates/login.html")
-
-
 
 app = webapp2.WSGIApplication([
     ("/", MainHandler),
