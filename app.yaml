@@ -11,6 +11,9 @@ handlers:
 - url: /login
   static_dir: Login
 
+# - url: /css
+#   static_dir: lgpg/templates/css
+
 - url: /css
   static_dir: css
 

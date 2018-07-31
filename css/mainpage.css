@@ -16,11 +16,10 @@ body {
 
 /* navigation bar stylez */
 nav {
-  /* color: black; */
   text-align: center;
   padding: 15px;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 33px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -29,13 +28,17 @@ nav a {
   text-align: center;
   padding: 15px;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 33px;
   font-family: 'Raleway', sans-serif;
 }
 
 nav a:hover {
-  background: #FFF7AD;
+  /* background: #FFF7AD; */
+  background: #FFD7CA;
+  /* background: #FFF18D; */
 }
+
+
 
 /* Next & previous buttons */
 .prev, .next {

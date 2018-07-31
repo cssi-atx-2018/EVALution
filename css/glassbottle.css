@@ -25,22 +25,24 @@ nav a {
 }
 
 nav a:hover {
-  background: #FFF7AD;
+  /* background: #FFF7AD; */
+  background: #FFD7CA;
   /* background: #FFF18D; */
 }
 
 textarea[type=text] {
-  font-size: 25px;
-  color: white;
+  font-size: 27px;
+  color: #999999;
   /* change height to a percent or something */
   /* height: 500px; */
   width: 80%;
   overflow: auto;
-  padding: 12px 20px;
+  padding: 2% 2% 2% 2%;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  background-color: #FFD7CA;
+  /* background-color: #FFD7CA; */
+  background-color: #faffe6ff;
   outline: none;
   /* background-color: #FFD5B8; */
   resize: none;
