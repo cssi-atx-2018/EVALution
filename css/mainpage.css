@@ -18,19 +18,19 @@ body {
 nav {
   /* color: black; */
   text-align: center;
-  padding: 10px;
-  padding-top:10px;
+
+  padding: 15px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 40px;
   font-family: 'Raleway', sans-serif;
 }
 
 nav a {
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: 15px;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 40px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -106,4 +106,31 @@ nav a:hover {
   -webkit-animation-duration: 10s;
   animation-name: fade;
   animation-duration: 10s;
+}
+
+.text1 {
+
+  font-size: 30px;
+  text-align: center;
+  width: 50%;
+  height: 350px;
+  border: 5px solid #b3b3ff;
+  background-color: #b3c6ff;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
+
+.text2 {
+  font-size: 30px;
+  text-align: center;
+  width: 50%;
+  height: 350px;
+  border: 5px solid #b3c6ff;
+  background-color: #b3b3ff;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
+
+nav a.textlink:hover {
+  background: #b3ecff;
 }
