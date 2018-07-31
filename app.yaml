@@ -1,7 +1,7 @@
 runtime: python27
 api_version: 1
 threadsafe: true
-# above tells you how an app launces
+# above tells you how an app launches
 
 handlers:
 - url: /favicon\.ico
