@@ -9,6 +9,32 @@
   margin: auto;
 }
 
+body {
+  background-color: #7ad1bb90;
+}
+
+/* navigation bar stylez */
+nav {
+  /* color: black; */
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 33px;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav a {
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 33px;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav a:hover {
+  background: #FFF7AD;
+}
 
 /* Next & previous buttons */
 .prev, .next {
