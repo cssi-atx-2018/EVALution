@@ -24,7 +24,20 @@ class BottleHandler(webapp2.RequestHandler):
 
     def post(self):
         text = self.request.get("entry")
-        
+
+class LGBottleHandler(webapp2.RequestHandler):
+    def get(self):
+        bottle_template = jinja_env.get_template("templates/glassbottlelg.html")
+        self.response.write(bottle_template.render())
+
+class PostsHandler(webapp2.RequestHandler):
+    def get(self):
+        bottle_template = jinja_env.get_template("templates/posts.html")
+        self.response.write(bottle_template.render())
+
+    # def post(self):
+    #     text = self.request.get("entry")
+
 class LoginHandler(webapp2.RequestHandler):
     def post(self):
         login_template = jinja_env.get_template("Login/templates/login.html")
@@ -44,6 +57,8 @@ class AboutHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ("/", MainHandler),
     ("/glass-bottle", BottleHandler),
+    ("/glass-bottle-lg", LGBottleHandler),
+    ("/posts", PostsHandler),
     ("/login", LoginHandler),
     ("/resources", ResourceHandler),
     ("/music", MusicHandler),
