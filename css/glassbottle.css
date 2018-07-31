@@ -41,6 +41,7 @@ textarea[type=text] {
   box-sizing: border-box;
   border: none;
   background-color: #FFD7CA;
+  outline: none;
   /* background-color: #FFD5B8; */
   resize: none;
 }
