@@ -7,6 +7,9 @@ handlers:
 - url: /login
   static_dir: /login
 
+- url: /css
+  static_dir: css
+
 - url: /.*
   script: main.app
 
