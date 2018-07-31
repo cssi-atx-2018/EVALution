@@ -17,6 +17,16 @@ class MainHandler(webapp2.RequestHandler):
         start_template = jinja_env.get_template("templates/mainpage.html")
         self.response.write(start_template.render())
 
+class LGBottleHandler(webapp2.RequestHandler):
+    def get(self):
+        bottle_template = jinja_env.get_template("templates/glassbottlelg.html")
+        self.response.write(bottle_template.render())
+
+    def post(self):
+        text = self.request.get("entry")
+        post = Post(post_content=text, post_user_id="")
+        post.put()
+
 class BottleHandler(webapp2.RequestHandler):
     def get(self):
         bottle_template = jinja_env.get_template("templates/glassbottle.html")
@@ -24,9 +34,16 @@ class BottleHandler(webapp2.RequestHandler):
 
 # need to fix so that it works only if you are logged in
     def post(self):
+        post_template = jinja_env.get_template("templates/posts.html")
         text = self.request.get("entry")
         post = Post(post_content=text, post_user_id="")
         post.put()
+        self.response.write(post_template)
+
+class PostHandler(webapp2.RequestHandler):
+    def get(self):
+        post_template = jinja_env.get_template("templates/posts.html")
+        self.response.write(post_template.render())
 
 class LoginHandler(webapp2.RequestHandler):
     def post(self):
@@ -46,7 +63,9 @@ class AboutHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ("/", MainHandler),
+    ("/glass-bottle-lg", LGBottleHandler),
     ("/glass-bottle", BottleHandler),
+    ("/posts", PostHandler),
     ("/login", LoginHandler),
     ("/resources", ResourceHandler),
     ("/music", MusicHandler),
