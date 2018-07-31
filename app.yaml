@@ -5,7 +5,14 @@ threadsafe: true
 
 handlers:
 - url: /login
-  static_dir: /login
+  static_dir: login
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /css
+  static_dir: css
 
 - url: /.*
   script: main.app
