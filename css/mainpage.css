@@ -107,3 +107,26 @@ nav a:hover {
   animation-name: fade;
   animation-duration: 10s;
 }
+
+.text1 {
+
+  font-size: 30px;
+  text-align: center;
+  width: 50%;
+  height: 350px;
+  border: 5px solid #b3b3ff;
+  background-color: #b3c6ff;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
+
+.text2 {
+  font-size: 30px;
+  text-align: center;
+  width: 50%;
+  height: 350px;
+  border: 5px solid #b3c6ff;
+  background-color: #b3b3ff;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
