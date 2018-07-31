@@ -66,6 +66,7 @@ class MusicHandler(webapp2.RequestHandler):
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
         about_template = jinja_env.get_template("templates/about.html")
+        self.response.write(about_template.render())
 
 app = webapp2.WSGIApplication([
     ("/", MainHandler),
