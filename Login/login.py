@@ -7,23 +7,21 @@ load = jinja2.FileSystemLoader(searchpath = './')
 env = jinja2.Environment(loader = load)
 
 class input(webapp2.RequestHandler):
-
     def get(self):
-
-        template =  env.get_template("templates/loginu.html")
-        template.render()
-        user = users.User(self.request.get('email'))
-        print ('user')
+        user = users.get_current_user()
         if user:
             nickname = user.nickname()
-            logout = users.create_logout_url()
-
+            logout_url = users.create_logout_url('/')
+            greeting = 'Welcome, {}! (<a href="{}">sign out</a>)'.format(
+            nickname, logout_url)
         else:
-            login = users.create_login_url('/')
+            login_url = users.create_login_url('/')
+             greeting = '<a href="{}">Sign in</a>'.format(login_url)
+  self.response.write('<html><body>{}</body></html>'.format(greeting))
 
 
 
-app = webapp2.WSGIApplication([
-('/login', input)
+test = webapp2.WSGIApplication([
+('/login', input),
 
 ])

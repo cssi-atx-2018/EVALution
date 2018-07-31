@@ -9,4 +9,7 @@ libraries:
   version: latest
 handlers: # controller. If put in url then run the app
 - url: /.*
-  script: login.app
+  script: login.test
+- url: /posts
+  login: required
+  auth_fail_action: unauthorized 
