@@ -12,6 +12,8 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+user = users.get_current_user()
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_env.get_template("templates/mainpage.html")
@@ -44,9 +46,24 @@ class PostHandler(webapp2.RequestHandler):
         post_template = jinja_env.get_template("templates/posts.html")
         self.response.write(post_template.render())
 
+# need to add login button on all pages
 class LoginHandler(webapp2.RequestHandler):
-    def post(self):
+    def get(self):
         login_template = jinja_env.get_template("Login/templates/login.html")
+        self.response.write(login_template.render())
+
+    def post(self):
+        if user:
+            nickname = user.nickname()
+            logout_url = users.create_logout_url('/')
+            self.response.write(logout_url)
+
+            bottle_template = jinja_env.get_template("templates/glassbottlelg.html")
+
+        else:
+            bottle_template = jinja_env.get_template("templates/glassbottle.html")
+
+        self.response.write(bottle_template.render())
 
 class ResourceHandler(webapp2.RequestHandler):
     def get(self):

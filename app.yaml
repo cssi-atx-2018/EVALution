@@ -8,7 +8,7 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: /login
+- url: /Login
   static_dir: Login
 
 - url: /css
