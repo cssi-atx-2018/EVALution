@@ -44,7 +44,6 @@ class PostHandler(webapp2.RequestHandler):
         post_template = jinja_env.get_template("templates/posts.html")
         self.response.write(post_template.render())
 
-
 class LoginHandler(webapp2.RequestHandler):
     def post(self):
         login_template = jinja_env.get_template("Login/templates/login.html")
