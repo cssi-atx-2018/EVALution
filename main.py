@@ -33,7 +33,7 @@ class BottleHandler(webapp2.RequestHandler):
         self.response.write(bottle_template.render())
 # need to fix so that it works only if you are logged in
     def post(self):
-        post_template = jinja_env.get_template("template/posts.html")
+        post_template = jinja_env.get_template("templates/posts.html")
         text = self.request.get("entry")
         post = Post(post_content=text, post_user_id="")
         post.put()
