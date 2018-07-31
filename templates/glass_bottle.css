@@ -1,0 +1,35 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+
+textarea[type=text] {
+  font-size: 20px;
+  color: white;
+  height: 500px;
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #7ad1bb90;
+  resize: none;
+}
+
+input[type=submit] {
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  margin: 1% 1% 1% 1%;
+  width: 15%;
+  cursor: pointer;
+}
+
+    /* width: 100%;
+
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+     */
