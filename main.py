@@ -65,10 +65,12 @@ class LoginHandler(webapp2.RequestHandler):
 class ResourceHandler(webapp2.RequestHandler):
     def get(self):
         resources_template = jinja_env.get_template("templates/resources.html")
+        self.response.write(resources_template.render())
 
 class MusicHandler(webapp2.RequestHandler):
     def get(self):
         music_template = jinja_env.get_template("templates/music.html")
+        self.response.write(music_template.render())
 
 class AboutHandler(webapp2.RequestHandler):
     def get(self):

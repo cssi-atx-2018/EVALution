@@ -29,3 +29,7 @@ nav a:hover {
   background: #FFF7AD;
   /* background: #FFF18D; */
 }
+
+div {
+  padding: 5% 5% 5% 5%;
+}
