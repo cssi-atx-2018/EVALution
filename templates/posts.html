@@ -15,6 +15,13 @@
       <a href="/about">about</a>
       <a href="/login">login</a>
     </nav>
+
+    {% for post in posts %}
+      <div>
+        {{post.post_content}}
+      </div>
+    {% endfor%}
+    
   </head>
 
 </html>

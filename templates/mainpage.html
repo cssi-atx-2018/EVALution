@@ -14,7 +14,7 @@
       <a href="/resources">resources</a>
       <a href="/music">music</a>
       <a href="/about">about</a>
-      <a href="/login">login</a>
+      <a id="login_button" href="{{login_url}}">login</a>
     </nav>
   </head>
   <body>
@@ -90,7 +90,13 @@
       </nav>
     </div>
 
-
+  <script>
+    if(user){
+      login_button = document.querySelector("login_button")
+      login_button.addEventListener("onclick", ()=> {
+        login_button.
+      })
+    }
 
 
 
