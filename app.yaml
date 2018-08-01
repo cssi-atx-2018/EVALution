@@ -4,12 +4,12 @@ threadsafe: true
 # above tells you how an app launches
 
 handlers:
+- url: /login
+  static_dir: login
+
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
-
-- url: /Login/templates
-  static_dir: Login/templates
 
 - url: /css
   static_dir: css

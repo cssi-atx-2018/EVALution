@@ -1,3 +1,5 @@
+
+
 body {
   background-color: #7ad1bb90;
   font-family: 'Raleway', sans-serif;
@@ -9,10 +11,12 @@ body {
 nav {
   /* color: black; */
   text-align: center;
+
   padding: 10px;
   padding-top: 10px;
   text-decoration: none;
   font-size: 20px;
+
   font-family: 'Raleway', sans-serif;
 }
 
@@ -27,6 +31,7 @@ nav a {
 
 nav a:hover {
   background: #FFF7AD;
+
   /* background: #FFF18D; */
 }
 
@@ -59,8 +64,10 @@ input[type=submit] {
   cursor: pointer;
 }
 
+
 form {
   text-decoration: none;
   display: center;
   padding: 2% 0 0 15%;
 }
+
