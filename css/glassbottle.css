@@ -1,12 +1,7 @@
-.container {
-  display: grid;
-  grid-row-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100px;
-}
-
 body {
-  background-color: #7ad1bb90;
+  background-color: #6dbca890;
+  /* background-color: #6ab6a290; */
+  /* background-color: #73c6b190; */
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
   color: white;
@@ -14,40 +9,43 @@ body {
 
 /* navigation bar stylez */
 nav {
-  /* color: black; */
   text-align: center;
-  padding: 10px;
-  padding-top: 10px;
+  padding: 15px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 33px;
   font-family: 'Raleway', sans-serif;
 }
 
 nav a {
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: 15px;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 33px;
   font-family: 'Raleway', sans-serif;
 }
 
 nav a:hover {
-  background: #FFF7AD;
+  background: #FFD7CA;
+  /* background: #FFF7AD; */
+  /* background: #FFF18D; */
 }
 
 textarea[type=text] {
-  font-size: 25px;
-  color: white;
+  font-size: 27px;
+  color: #999999;
   /* change height to a percent or something */
   /* height: 500px; */
   width: 80%;
   overflow: auto;
-  padding: 12px 20px;
+  padding: 2% 2% 2% 2%;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  background-color: #ffc6b3;
+  /* background-color: #FFD7CA; */
+  background-color: #faffe6ff;
+  outline: none;
+  /* background-color: #FFD5B8; */
   resize: none;
 }
 
@@ -63,24 +61,37 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* background-color: #4CAF50;
-
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer; */
-
 form {
   text-decoration: none;
   display: center;
   padding: 2% 0 0 15%;
 }
-/*
-button {
-  margin-top: 30px;
-  margin-left: 25px;
-  margin-right: 25px;
-  font-family: Georgia, serif;
-  font-size: 35px;
-} */
+
+
+.words {
+  padding: 1% 1% 1% 1%;
+  margin: 0 2% 0 2%;
+  /* color: #999999; */
+}
+
+.names{
+  margin: auto;
+  text-align: center;
+}
+
+.name {
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 37px;
+}
+
+p {
+  font-size: 23px;
+}
+
+.inline {
+  display: inline-block;
+  margin: 1% 3% 1% 1%;
+}

@@ -7,6 +7,11 @@ libraries:
   version: latest
 - name: webapp2
   version: latest
+
 handlers: # controller. If put in url then run the app
 - url: /.*
-  script: login.app
+  script: login.test
+- url: /posts
+  script: login.test 
+  login: required
+  auth_fail_action: unauthorized
