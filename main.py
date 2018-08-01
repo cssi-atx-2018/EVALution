@@ -14,11 +14,13 @@ jinja_env = jinja2.Environment(
     autoescape=True)
 
 user = users.get_current_user()
+logout_url = users.create_logout_url('/')
+login_url = users.create_login_url('/')
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_env.get_template("templates/mainpage.html")
-        self.response.write(start_template.render())
+        self.response.write(start_template.render({"login_url": login_url, "user": user}))
 
 class LGBottleHandler(webapp2.RequestHandler):
     def get(self):
@@ -27,7 +29,7 @@ class LGBottleHandler(webapp2.RequestHandler):
 
     def post(self):
         text = self.request.get("entry")
-        post = Post(post_content=text, post_user_id="")
+        post = Post(post_content=text, post_user_id=users.get_current_user())
         post.put()
 
 class BottleHandler(webapp2.RequestHandler):
@@ -44,8 +46,9 @@ class BottleHandler(webapp2.RequestHandler):
 
 class PostHandler(webapp2.RequestHandler):
     def get(self):
+        posts = Post.query().fetch()
         post_template = jinja_env.get_template("templates/posts.html")
-        self.response.write(post_template.render())
+        self.response.write(post_template.render({"posts": posts}))
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
@@ -53,11 +56,10 @@ class LoginHandler(webapp2.RequestHandler):
         if user:
             nickname = user.nickname()
             self.response.write("You can Continue")
-            logout_url = users.create_logout_url('/')
             greeting = 'Welcome, {}! (<a href="{}">sign out</a>)'.format(
             nickname, logout_url)
+            self.response.write('<html><body>{}</body></html>'.format(greeting))
         else:
-            login_url = users.create_login_url('/')
             self.response.write('You must login')
             greeting = '<a href="{}">Sign in</a>'.format(login_url)
             self.response.write('<html><body>{}</body></html>'.format(greeting))
