@@ -1,8 +1,7 @@
 body {
-  background-color: #7ad1bb90;
-  /* background-color: #71C2AD; */
-  /* background-color: #77CCB7; */
-  /* background-color: #79CFB9; */
+  background-color: #6dbca890;
+  /* background-color: #6ab6a290; */
+  /* background-color: #73c6b190; */
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
   color: white;
@@ -72,10 +71,23 @@ form {
   /* color: #999999; */
 }
 
+.names{
+  margin: auto;
+}
+
+.name {
+  font-size: 30px;
+}
+
 h1 {
-  font-size: 35px;
+  font-size: 37px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 23px;
+}
+
+.inline {
+  display: inline-block;
+  margin: 1% 3% 1% 1%;
 }
