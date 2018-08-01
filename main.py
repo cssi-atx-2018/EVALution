@@ -13,6 +13,8 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+user = users.get_current_user()
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_env.get_template("templates/mainpage.html")
@@ -59,9 +61,6 @@ class LoginHandler(webapp2.RequestHandler):
                 self.response.write('You must login')
                 greeting = '<a href="{}">Sign in</a>'.format(login_url)
             self.response.write('<html><body>{}</body></html>'.format(greeting))
-
-
-
 
 class ResourceHandler(webapp2.RequestHandler):
     def get(self):
