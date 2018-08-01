@@ -11,15 +11,6 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-<<<<<<< HEAD
-- url: /login
-  static_dir: Login
-
-# - url: /css
-#   static_dir: lgpg/templates/css
-
-=======
->>>>>>> 33277c2f310ffa8a16a3ea714a840552711ba614
 - url: /css
   static_dir: css
 

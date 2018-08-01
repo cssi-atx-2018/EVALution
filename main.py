@@ -47,16 +47,6 @@ class PostHandler(webapp2.RequestHandler):
         post_template = jinja_env.get_template("templates/posts.html")
         self.response.write(post_template.render())
 
-<<<<<<< HEAD
-# class LoginHandler(webapp2.RequestHandler):
-#     def get(self):
-#         login_template = jinja_env.get_template("lgpg/templates/login.html")
-#         self.response.write(login_template.render())
-#
-#     def post(self):
-#         login_template = jinja_env.get_template("lgpg/templates/login.html")
-#         self.response.write(login_template.render())
-=======
 class LoginHandler(webapp2.RequestHandler):
         def get(self):
             user = users.get_current_user()
@@ -71,7 +61,6 @@ class LoginHandler(webapp2.RequestHandler):
                 self.response.write('You must login')
                 greeting = '<a href="{}">Sign in</a>'.format(login_url)
             self.response.write('<html><body>{}</body></html>'.format(greeting))
->>>>>>> 33277c2f310ffa8a16a3ea714a840552711ba614
 
 class ResourceHandler(webapp2.RequestHandler):
     def get(self):
@@ -93,7 +82,7 @@ app = webapp2.WSGIApplication([
     ("/glass-bottle-lg", LGBottleHandler),
     ("/glass-bottle", BottleHandler),
     ("/posts", PostHandler),
-    # ("/login", LoginHandler),
+    ("/login", LoginHandler),
     ("/resources", ResourceHandler),
     ("/music", MusicHandler),
     ("/about", AboutHandler)
