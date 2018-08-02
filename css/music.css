@@ -31,7 +31,7 @@ nav a:hover {
 .music {
   margin: 1% 1% 1% 1%;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33% 33% 33%;
   grid-template-rows: auto auto auto auto 5%;
   /* grid-auto-flow: row; */
   /* grid-column-gap: 1%; */

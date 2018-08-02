@@ -50,6 +50,10 @@ textarea[type=text] {
   resize: none;
 }
 
+::placeholder {
+  color: #CCCCCC;
+}
+
 input[type=submit] {
   font-size: 15px;
   background-color: #faffe6ff;
