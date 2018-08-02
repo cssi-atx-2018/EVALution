@@ -12,13 +12,13 @@ class input(webapp2.RequestHandler):
         if user:
             nickname = user.nickname()
             self.response.write("You can Continue")
-            logout_url = users.create_logout_url('/')
-            greeting = 'Welcome, {}! (<a href="{}">sign out</a>)'.format(
+            logout_url = users.create_logout_url(dest_url = 'https://glass-bottle-help.appspot.com/')
+            #greeting = 'Welcome, {}! (<a href="{}">sign out</a>)'.format(
             nickname, logout_url)
         else:
-            login_url = users.create_login_url('/')
+            login_url = users.create_login_url('')
             self.response.write('You must login')
-            greeting = '<a href="{}">Sign in</a>'.format(login_url)
+            #greeting = '<a href="{}">Sign in</a>'.format(login_url)
         self.response.write('<html><body>{}</body></html>'.format(greeting))
 
 

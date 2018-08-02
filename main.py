@@ -25,7 +25,12 @@ class MainHandler(webapp2.RequestHandler):
 class LGBottleHandler(webapp2.RequestHandler):
     def get(self):
         bottle_template = jinja_env.get_template("templates/glassbottlelg.html")
-        self.response.write(bottle_template.render({"login_url": login_url, "logout_url": logout_url}))
+        self.response.write(bottle_template.render())
+
+    def post(self):
+        text = self.request.get("entry")
+        post = Post(post_content=text, post_user_id = '')
+        post.put()
 
 class BottleHandler(webapp2.RequestHandler):
     def get(self):
