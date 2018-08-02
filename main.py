@@ -32,6 +32,7 @@ class BottleHandler(webapp2.RequestHandler):
         bottle_template = jinja_env.get_template("templates/glassbottle.html")
         self.response.write(bottle_template.render({"login_url": login_url, "logout_url": logout_url}))
 
+
 class PostHandler(webapp2.RequestHandler):
     def get(self):
         posts = Post.query().fetch()
