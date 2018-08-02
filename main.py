@@ -19,9 +19,6 @@ login_url = users.create_login_url('/')
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        glassbottle_url = "/glass-bottle"
-        if(user):
-            glassbottle_url = "/glass-bottle-lg"
         start_template = jinja_env.get_template("templates/mainpage.html")
         self.response.write(start_template.render({"login_url": login_url, "logout_url": logout_url}))
 
@@ -30,28 +27,25 @@ class LGBottleHandler(webapp2.RequestHandler):
         bottle_template = jinja_env.get_template("templates/glassbottlelg.html")
         self.response.write(bottle_template.render({"login_url": login_url, "logout_url": logout_url}))
 
-    def post(self):
-        text = self.request.get("entry")
-        post = Post(post_content=text, post_user_id=users.get_current_user())
-        post.put()
-
 class BottleHandler(webapp2.RequestHandler):
     def get(self):
         bottle_template = jinja_env.get_template("templates/glassbottle.html")
         self.response.write(bottle_template.render({"login_url": login_url, "logout_url": logout_url}))
-# need to fix so that it works only if you are logged in
-    def post(self):
-        post_template = jinja_env.get_template("templates/posts.html")
-        text = self.request.get("entry")
-        post = Post(post_content=text, post_user_id="")
-        post.put()
-        self.response.write(post_template.render({"login_url": login_url, "logout_url": logout_url}))
 
 class PostHandler(webapp2.RequestHandler):
     def get(self):
         posts = Post.query().fetch()
         post_template = jinja_env.get_template("templates/posts.html")
-        self.response.write(post_template.render({"login_url": login_url, "logout_url": logout_url}))
+        self.response.write(post_template.render({"login_url": login_url, "logout_url": logout_url, "posts": posts}))
+
+    def post(self):
+        text = self.request.get("entry")
+        post = Post(post_content=text, post_user_id="")
+        post.put()
+
+        posts = Post.query().fetch()
+        post_template = jinja_env.get_template("templates/posts.html")
+        self.response.write(post_template.render({"login_url": login_url, "logout_url": logout_url, "posts": posts}))
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
