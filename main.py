@@ -4,6 +4,7 @@ the main page template, the glass bottle template'''
 import webapp2
 import os
 import jinja2
+import time
 
 from google.appengine.api import users
 from models import Post
@@ -48,9 +49,10 @@ class PostHandler(webapp2.RequestHandler):
         text = self.request.get("entry")
         post = Post(post_content=text, post_user_id="")
         post.put()
-
+        time.sleep(.1)
         posts = Post.query().fetch()
         post_template = jinja_env.get_template("templates/posts.html")
+
         self.response.write(post_template.render({"login_url": login_url, "logout_url": logout_url, "posts": posts}))
 
 class LoginHandler(webapp2.RequestHandler):
