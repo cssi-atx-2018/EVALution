@@ -242,7 +242,7 @@ div a:hover {
 .img {
   display: inline-block;
 flex-direction: row;
-background-image: url('/images/blu.png');
+background-image: url('/images/images.png');
 background-size: cover;
 height: fit-content;
 width: fit-content;
