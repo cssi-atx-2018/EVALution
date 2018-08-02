@@ -1,5 +1,6 @@
 body {
-  background-color: #6dbca890;
+  /* background-color: #6dbca890; */
+  background-color: #66af8890;
   /* background-color: #6ab6a290; */
   /* background-color: #73c6b190; */
   font-family: 'Raleway', sans-serif;
@@ -51,7 +52,7 @@ textarea[type=text] {
 
 input[type=submit] {
   font-size: 15px;
-  background-color: white;
+  background-color: #faffe6ff;
   border: none;
   text-decoration: none;
   /* background-color: #b3ffda; */

@@ -15,35 +15,18 @@
       <a href="/resources">resources</a>
       <a href="/music">music</a>
       <a href="/about">about</a>
-      <a href="/login">login</a>
+      <a id="login_button" href="{{login_url}}">login</a>
     </nav>
   </head>
   <body>
     <div class="slideshow-container">
 
-    <div class="mySlides fade">
-      <!-- <div class="numbertext">1 / 3</div> -->
-      <img src="css/img1.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-      <!-- <div class="numbertext">2 / 3</div> -->
-      <img src="css/img2.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-      <!-- <div class="numbertext">3 / 3</div> -->
-      <img src="css/img3.jpg" style="width:100%">
-    </div>
-
     </div>
     <div class="slideshow-container">
     <div class="mySlides fade">
       <img src="css/img1.jpg" style="width:100%">
     </div>
-    <div class="mySlides fade">
-      <img src="css/img2.jpg" style="width:100%">
-    </div>
+
     <div class="mySlides fade">
       <img src="css/img3.jpg" style="width:100%">
     </div>
@@ -66,7 +49,7 @@
           <br> - Ehudi Menuhin
         </p>
         <nav>
-          <a class="textlink" href="/music">Music</a>
+          <a class="textlink" href="/music" >Music</a>
         </nav>
       </div>
 
@@ -82,7 +65,7 @@
 
 
     <div class="howitworksdisclaimer">
-      <h1> A letter from the creators,</h1>
+      <h1> A letter from the founders,</h1>
       <p>
         Our main aim is to create a safespace for you and all of our users!
         Everything is completely anonymous unless you choose to share with
@@ -93,6 +76,26 @@
         are concerning action will be taken accordingly.
       </p>
     </div>
+
+    <div class="toresources" style="text-align: center">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Kalam|Playfair+Display" rel="stylesheet">
+      <p>
+        Check out our resources page!
+      </p>
+      <nav>
+        <a class="textlink" href="/resources">Resources</a>
+      </nav>
+    </div>
+
+  <script>
+    if(user){
+      login_button = document.querySelector("login_button")
+      login_button.addEventListener("onclick", ()=> {
+        login_button.
+      })
+    }
+
+
 
 
 
