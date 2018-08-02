@@ -231,3 +231,15 @@ div a:hover {
   font-family: 'Permanent Marker', cursive;
   font-size: 100px;
 } */
+.img {
+  display: inline-block;
+flex-direction: row;
+background-image: url(/images/images.png);
+background-size: cover;
+height: fit-content;
+width: fit-content;
+text-align: center;
+vertical-align: middle;
+margin: 20px;
+padding: 100px;
+}

@@ -20,7 +20,7 @@ class input(webapp2.RequestHandler):
             self.response.write('You must login')
             greeting = '<a href="{}">Sign in</a>'.format(login_url)
         self.response.write('<html><body>{}</body></html>'.format(greeting))
-
+        
 
 demo = webapp2.WSGIApplication([
 ('/login', input),

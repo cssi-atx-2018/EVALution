@@ -29,7 +29,7 @@ class LGBottleHandler(webapp2.RequestHandler):
 
     def post(self):
         text = self.request.get("entry")
-        post = Post(post_content=text, post_user_id=users.get_current_user())
+        post = Post(post_content=text, post_user_id = '')
         post.put()
 
 class BottleHandler(webapp2.RequestHandler):
