@@ -241,8 +241,9 @@ div a:hover {
 } */
 .img {
   display: inline-block;
+  background-color:#85adade9;
+  border: solid 4px white;
 flex-direction: row;
-background-image: url('/images/images.png');
 background-size: cover;
 height: fit-content;
 width: fit-content;
