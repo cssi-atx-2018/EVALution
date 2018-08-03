@@ -2,8 +2,14 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>the glass bottle</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/glassbottle.css" type="text/css">
     <!-- <button type="submit" id="Sign In">Sign In</button> -->
     <!-- <img src = "logo.png"> -->
@@ -24,11 +30,20 @@
   <body>
     <!-- <h1> Phial your thoughts here </h1> -->
     <!-- <form method="GET"> -->
-    <form method="POST" action = "/posts">
+    <!-- <form method="POST" action = "/posts">
       <textarea name = "entry" type="text" rows="21" placeholder= "write your thoughts down and send them away anonymously..."></textarea>
       <br><br>
       <input method="GET" type="submit" value="send your thought away" style=font-family: 'Raleway', sans-serif;>
       <input type="submit" value="share your thought">
+    </form> -->
+    <form method="POST" action="/posts">
+      <textarea name="entry" style="min-width:70%" type="text" rows="21" placeholder="write your thoughts down and send them away anonymously..."></textarea>
+      <br><br>
+      <input type="submit" value="share your thought" style="min-width:150px">
+
+        <input type="submit" form="get-form" value="send your thought away" style="min-width:200px;">
+    </form>
+    <form method="GET" id="get-form">
     </form>
 
   </body>

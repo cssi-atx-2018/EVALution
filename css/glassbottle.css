@@ -1,6 +1,6 @@
 body {
   /* background-color: #6dbca890; */
-  background-color: #66af8890;
+  background-color: #85adade9;
   /* background-color: #6ab6a290; */
   /* background-color: #73c6b190; */
   font-family: 'Raleway', sans-serif;
@@ -34,7 +34,8 @@ nav a:hover {
 
 textarea[type=text] {
   font-size: 27px;
-  color: #999999;
+  /* color: #999999; */
+  color: #714955;
   /* change height to a percent or something */
   /* height: 500px; */
   width: 80%;
@@ -44,19 +45,20 @@ textarea[type=text] {
   box-sizing: border-box;
   border: none;
   /* background-color: #FFD7CA; */
-  background-color: #faffe6ff;
+  background-color: #f0f8ea;
   outline: none;
   /* background-color: #FFD5B8; */
   resize: none;
 }
 
 ::placeholder {
-  color: #CCCCCC;
+  color: #93827F;
 }
 
 input[type=submit] {
   font-size: 15px;
-  background-color: #faffe6ff;
+  background-color: #f0f8ea;
+  color: #33435e;
   border: none;
   text-decoration: none;
   /* background-color: #b3ffda; */
