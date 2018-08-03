@@ -1,6 +1,6 @@
 body {
   /* background-color: #6dbca890; */
-  background-color: #66af8890;
+  background-color: #85adade9;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -53,6 +53,10 @@ p {
   font-size: 30px;
 }
 
+.references {
+  text-align: justify;
+  font-size: 20px;
+}
 /* .words {
   padding: 1% 1% 1% 1%;
   margin: 0 2% 0 2%;

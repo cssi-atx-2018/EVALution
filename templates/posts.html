@@ -2,9 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>welcome</title>
-    <link rel="stylesheet" href="css/mainpage.css" href= "mainpage.js" type="text/css">
+    <title>posts</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/mainpage.css" href= "mainpage.js" type="text/css">
+
     <!-- navigation bar -->
     <nav>
       <a href="/">home</a>
@@ -16,7 +22,6 @@
       <a id="login_button" href="{{login_url}}">login</a>
       <a id="logout_button" href="{{logout_url}}">logout</a>
     </nav>
-
     {% for post in posts %}
       <div class = 'img'>
       {{post.post_content}}

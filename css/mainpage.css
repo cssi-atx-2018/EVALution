@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: #85adad;
+  background-color: #85adade9;
 }
 
 /* navigation bar stylez */
@@ -34,8 +34,10 @@ nav a {
 }
 
 nav a:hover {
-  /* background: #FFF7AD; */
   background: #FFD7CA;
+  /* background: #d8d2e1;
+  background: #797a9e; */
+  /* background: #FFF7AD; */
   /* background: #FFF18D; */
 }
 
@@ -241,13 +243,14 @@ div a:hover {
 } */
 .img {
   display: inline-block;
-flex-direction: row;
-background-image: url('/images/images.png');
-background-size: cover;
-height: fit-content;
-width: fit-content;
-text-align: center;
-vertical-align: middle;
-margin: 20px;
-padding: 100px;
+  flex-direction: row;
+  font-family: 'Raleway', san-serif;
+  background-image: url('/images/ncloud.png');
+  background-size: cover;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+  vertical-align: middle;
+  margin: 30px;
+  padding: 100px;
 }
